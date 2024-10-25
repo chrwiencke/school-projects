@@ -9,7 +9,11 @@
 </head>
 <body>
     <h1 class="hacker" data-value="School Projects">School Projects</h1>
-    <button hx-get="https://get-data-from-school-project-d1.pludo.workers.dev/" hx-target=".projects" hx-swap="innerHTML"> Load Projects</button>
+    <div class="projects" 
+        hx-get="https://get-data-from-school-project-d1.pludo.workers.dev/" 
+        hx-trigger="load"
+        hx-swap="innerHTML">
+</div>    
 <script src="hacker.js"></script>
 </body>
 </html>
