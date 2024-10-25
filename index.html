@@ -1,43 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>School Projects</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="hacker.css">
+    <script src="https://unpkg.com/htmx.org@2.0.3" integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq" crossorigin="anonymous"></script>
+    <script src="hacker.js"></script>
 </head>
-
 <body>
     <h1 class="hacker" data-value="School Projects">School Projects</h1>
-    <div class="projects">
-        <a class="projectshowcase" href="https://pludoagency.pludo.org/">
-            <div>
-                <h2>Pludo Agency</h2>
-                <p>School Project</p>
-            </div>
-        </a>
-        <a class="projectshowcase" href="https://artikkel.pludo.org/">
-            <div>
-                <h2>Artikkel</h2>
-                <p>School Project</p>
-            </div>
-        </a>
-        <a class="projectshowcase" href="https://chrwiencke.github.io/pludo-weather-tutorial/">
-            <div>
-                <h2>Pludo Weather</h2>
-                <p>Tutorial</p>
-            </div>
-        </a>
-        <a href="https://gitbook.pludo.org/k3s" class="projectshowcase">
-            <div>
-                <h2>K3S Documentation</h2>
-                <p>School Project</p>
-            </div>
-        </a>
-    </div>
-    <script src="hacker.js"></script>
+    <div class="projects" 
+        hx-get="https://get-data-from-school-project-d1.pludo.workers.dev/" 
+        hx-trigger="load"
+        hx-swap="innerHTML"
+        hx-indicator="#loading">
+    <div id="loading">Loading projects...</div>
+</div>    
 </body>
-
 </html>

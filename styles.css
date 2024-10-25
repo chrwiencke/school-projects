@@ -99,3 +99,11 @@ a {
         flex: 1 1 100%;
     }
 }
+
+#loading {
+    opacity: 1;
+    transition: opacity 200ms ease-in;
+}
+#loading.htmx-request {
+    opacity: 0.5;
+}
