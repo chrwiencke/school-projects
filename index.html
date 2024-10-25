@@ -11,8 +11,8 @@
     <h1 class="hacker" data-value="School Projects">School Projects</h1>
     <div class="projects" 
         hx-get="https://get-data-from-school-project-d1.pludo.workers.dev/" 
-        hx-trigger="load"
-        hx-swap="outerHTML"
+        hx-trigger="load delay:1s"
+        hx-swap="innerHTML"
         hx-indicator="#loading">
     <div id="loading">Loading projects...</div>
 </div>    
